@@ -1,6 +1,6 @@
 const Header = ()=>{
     return(
-        <div>
+        <div className="Header__Container">
             <img src="/images/logo.jpg" alt="" />
         </div>
     )

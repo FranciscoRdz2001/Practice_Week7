@@ -1,0 +1,9 @@
+.Header__Container{
+    display: flex;
+    justify-content: center;
+    width: 100%;
+}
+
+.Header__Container > img{
+    width: 50vw;
+}
