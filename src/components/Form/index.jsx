@@ -4,7 +4,7 @@ const Form =(props)=>{
     const [values , setValues] = useState({
         id:"",
         subject:"",
-        qualification:undefined
+        qualification:null
       })
     
       const {id, subject, qualification} = values
