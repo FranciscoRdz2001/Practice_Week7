@@ -4,7 +4,6 @@ const Form = (props) => {
 
 
     const { id, subject, qualification } = props.values
-
     const handleChange = (e) => {
         const { name, value } = e.target;
         props.setValues({ ...props.values, [name]: value });
@@ -15,9 +14,9 @@ const Form = (props) => {
         e.preventDefault();
 
 
-        props.values.updateIndex
+        props.updateIdx
             ? props.setSubjectsList(current => current.map((item,idx) => {
-                if(idx === props.values.updateIndex.idx){
+                if(idx === props.updateIdx.idx){
                     item= props.values
                 }
                 return item

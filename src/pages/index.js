@@ -15,8 +15,8 @@ export default function Home() {
     id:"",
     subject:"",
     qualification:0,
-    updateIndex: undefined
   })
+  const [updateIdx, setUpdateIdx] = useState(undefined)
 
   useEffect(()=>{
     console.log(values)
@@ -34,8 +34,8 @@ export default function Home() {
       <main className={styles.main}>
         <Header/>
         <div className={styles.Body}>
-          <Form values={values} setValues={setValues} subjectsList={subjects} setSubjectsList={setSubjects}/>
-          <List setValues={setValues} subjectsList={subjects} updateSubjects={setSubjects}/>
+          <Form updateIdx={updateIdx} setUpdateIdx={setUpdateIdx} values={values} setValues={setValues} subjectsList={subjects} setSubjectsList={setSubjects}/>
+          <List updateIdx={updateIdx} setUpdateIdx={setUpdateIdx} setValues={setValues} subjectsList={subjects} updateSubjects={setSubjects}/>
         </div>
       </main>
     </>

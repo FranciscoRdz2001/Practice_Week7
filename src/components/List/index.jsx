@@ -12,11 +12,11 @@ const List = (props) => {
         props.setValues({
             id: values[0].id,
             subject:values[0].subject,
-            qualification:values[0].qualification,
-            updateIndex: {
-                idx: idx
-            } 
+            qualification:values[0].qualification, 
           });
+        props.setUpdateIdx({
+            idx:idx
+        })
     }
 
     return (
