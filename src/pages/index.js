@@ -10,8 +10,18 @@ export default function Home() {
     subject:"Ping Pong",
     qualification:90
   }]);
+
+  const [values , setValues] = useState({
+    id:"",
+    subject:"",
+    qualification:0,
+  })
+  const [updateIdx, setUpdateIdx] = useState(undefined)
+
   useEffect(()=>{
-    console.log(subjects);
+    console.log(values)
+    console.log(subjects)
+
   },[subjects])
   return (
     <>
@@ -24,8 +34,8 @@ export default function Home() {
       <main className={styles.main}>
         <Header/>
         <div className={styles.Body}>
-          <Form subjectsList={setSubjects}/>
-          <List subjectsList={subjects}/>
+          <Form updateIdx={updateIdx} setUpdateIdx={setUpdateIdx} values={values} setValues={setValues} subjectsList={subjects} setSubjectsList={setSubjects}/>
+          <List updateIdx={updateIdx} setUpdateIdx={setUpdateIdx} setValues={setValues} subjectsList={subjects} updateSubjects={setSubjects}/>
         </div>
       </main>
     </>
