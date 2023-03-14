@@ -1,9 +1,28 @@
-.Header__Container{
+.Form__Container{
     display: flex;
-    justify-content: center;
-    width: 100%;
+    align-items: center;
+    flex-direction: column;
+    row-gap: 2rem;
 }
 
-.Header__Container > img{
-    width: 50vw;
+.Form__Container > label{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 20rem;
+}
+
+.Form__Container > label > input{
+    border-radius: 0.5rem;
+    border: 1px solid gray;
+    height: 2rem;
+}
+
+.Form__Container > button{
+    width:4.5rem;
+    height: 2.5rem;
+    border-radius: 0.3rem;
+    border: none;
+    color: white;
+    background-color: #0d6efd;
 }
