@@ -1,9 +1,18 @@
 import Head from 'next/head'
 import styles from '@/styles/Home.module.css'
 import { Form, Header, List } from '@/components'
+import { useEffect, useState } from 'react'
 
 
 export default function Home() {
+  const [subjects, setSubjects] = useState([{
+    id:"1",
+    subject:"Ping Pong",
+    qualification:90
+  }]);
+  useEffect(()=>{
+    console.log(subjects);
+  },[subjects])
   return (
     <>
       <Head>
@@ -15,8 +24,8 @@ export default function Home() {
       <main className={styles.main}>
         <Header/>
         <div className={styles.Body}>
-          <Form/>
-          <List/>
+          <Form subjectsList={setSubjects}/>
+          <List subjectsList={subjects}/>
         </div>
       </main>
     </>

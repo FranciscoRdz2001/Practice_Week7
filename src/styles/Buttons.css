@@ -5,6 +5,7 @@
     border-radius: 0.5rem;
     color: white;
     background-color: #dc3545;
+    cursor: pointer;
 }
 
 .ModifyButton{
@@ -14,4 +15,5 @@
     border-radius: 0.5rem;
     color: white;
     background-color: #198754;
+    cursor: pointer;
 }

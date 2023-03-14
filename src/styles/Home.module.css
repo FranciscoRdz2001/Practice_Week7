@@ -1,3 +1,7 @@
+.main{
+    display: grid;
+    row-gap: 2rem;
+}
 .Body{
     display: grid;
     grid-template-columns: 0.4fr 1.6fr;

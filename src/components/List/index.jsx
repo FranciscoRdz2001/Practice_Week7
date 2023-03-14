@@ -1,6 +1,6 @@
 import { DeleteButton, ModifyButton } from "..";
 
-const List = () =>{
+const List = (props) =>{
     return(
         <div className="List__Container">
             <div className="Titles__Container">
@@ -10,14 +10,20 @@ const List = () =>{
                 <div/>
                 <div/>
             </div>
+            {
+                props.subjectsList.map((item,idx)=>{
+                    return(
+                        <div key={idx} className={`Subjects__Container ${idx % 2 == 0 && 'GrayBackground'}`}>
+                            <div>{item.id}</div>
+                            <div>{item.subject}</div>
+                            <div>{item.qualification}</div>
+                            <div><DeleteButton/></div>
+                            <div><ModifyButton/></div>
+                        </div>
+                    )
+                })
+            }
 
-            <div className="Subjects__Container">
-                <div>AEB-1011</div>
-                <div>Programación web</div>
-                <div>90</div>
-                <div><DeleteButton/></div>
-                <div><ModifyButton/></div>
-            </div>
         </div>
     )
 }
