@@ -10,9 +10,7 @@ export default function Home() {
     subject:"Ping Pong",
     qualification:90
   }]);
-  useEffect(()=>{
-    console.log(subjects);
-  },[subjects])
+
   return (
     <>
       <Head>
@@ -25,7 +23,7 @@ export default function Home() {
         <Header/>
         <div className={styles.Body}>
           <Form subjectsList={setSubjects}/>
-          <List subjectsList={subjects}/>
+          <List subjectsList={subjects} updateSubjects={setSubjects}/>
         </div>
       </main>
     </>
