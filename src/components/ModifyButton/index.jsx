@@ -1,6 +1,6 @@
-const ModifyButton = ()=>{
+const ModifyButton = (props)=>{
     return(
-        <button className="ModifyButton">Modificar</button>
+        <button onClick={props.update} className="ModifyButton">Modificar</button>
     )
 }
 export default ModifyButton;
