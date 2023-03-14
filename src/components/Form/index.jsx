@@ -1,6 +1,10 @@
-const Form =()=>{
+const Form =(props)=>{
+    const handleSubmit =()=>{
+        console.log('Listo');
+    }
+
     return(
-        <form className="Form__Container" action="">
+        <form onSubmit={handleSubmit} className="Form__Container" action="">
             <label htmlFor="">
                 Clave
             <input placeholder="Ejm. AEB-1011" type="text" />

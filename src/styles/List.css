@@ -1,0 +1,30 @@
+.List__Container{
+    padding: 0 5rem;
+}
+
+.Titles__Container{
+    display: grid;
+    grid-template-columns: 0.7fr 1.8fr 0.8fr 0.7fr 0.7fr;
+    height: 3rem;
+}
+
+.Titles__Container > div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid #dee2e5
+}
+
+.Subjects__Container{
+    display: grid;
+    grid-template-columns: 0.7fr 1.8fr 0.8fr 0.7fr 0.7fr;
+    height: 4rem;
+}
+
+
+.Subjects__Container > div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid #dee2e5
+}
